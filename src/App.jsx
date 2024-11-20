@@ -1,13 +1,16 @@
 import './App.css'
+import {Login,Register} from "./pages"
+import { BrowserRouter, Routes,Route} from 'react-router-dom'
 
 function App() {
 
   return (
-    <>
-      <div>
-         Hello how are u
-      </div>
-    </>
+    <BrowserRouter>
+     <Routes>
+      <Route path="/" element={<Login/>} />
+      <Route path="/register" element={<Register/>} />
+     </Routes>
+    </BrowserRouter>
   )
 }
 
